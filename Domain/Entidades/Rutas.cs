@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services.IServicio.Rutas
+namespace Domain.Entidades
 {
-    public interface Rutas
+    public class Rutas
     {
-        Task<Rutas> GetRutas();
+
     }
 }

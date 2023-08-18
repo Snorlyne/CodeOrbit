@@ -7,6 +7,7 @@ using Repository.Context;
 using Service.IServicio.User;
 using Service.Servicio.User;
 using Services.IServicio;
+using Services.IServicio.Rutas;
 using Services.Servicio;
 using System.Text;
 
@@ -36,6 +37,7 @@ builder.Services.AddAuthentication(config => {
 
 builder.Services.AddTransient<IUserServicio, UserServicio>();
 builder.Services.AddTransient<IAutorizacionServicio, AutorizacionServicio>();
+builder.Services.AddTransient<IRutasServicio, RutasServicio>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
