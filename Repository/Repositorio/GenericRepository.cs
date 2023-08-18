@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Domain.Entidades;
+using Domain.Entidades.ViewModels;
+using Microsoft.EntityFrameworkCore;
 using Repository.Context;
 using System.Linq.Expressions;
 using System.Reflection;
@@ -83,6 +85,10 @@ namespace Repository.Repositorio
         public async Task<List<TEntity>> ObtieneLista()
         {
             return await entities.ToListAsync();
+        }
+        public async Task<Routes> ObtenerPorId(int? id)
+        {
+            return await context.Routes.FirstOrDefaultAsync(x => x.Id == id);
         }
         public async Task<List<TEntity>> ObtieneLista(Expression<Func<TEntity, bool>> lambda)
         {
