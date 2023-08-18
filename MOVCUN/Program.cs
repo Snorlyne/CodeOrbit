@@ -10,8 +10,8 @@ using Services.IServicio;
 using Services.IServicio.Routes;
 using Services.IServicio.Stops;
 using Services.Servicio;
-using Services.Servicio.Routes;
-using Services.Servicio.Stops;
+using Services.Servicio.Route;
+using Services.Servicio.StopsServicio;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -41,7 +41,7 @@ builder.Services.AddAuthentication(config => {
 builder.Services.AddTransient<IUserServicio, UserServicio>();
 builder.Services.AddTransient<IAutorizacionServicio, AutorizacionServicio>();
 builder.Services.AddTransient<IRoutesServicio, RoutesServicio>();
-builder.Services.AddTransient<IStopsServicio, StopsServicio>();
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

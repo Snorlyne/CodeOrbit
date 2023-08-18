@@ -14,6 +14,7 @@ namespace Repository.Context
         public virtual DbSet<Personas> Personas { get; set; }
         public virtual DbSet<Routes> Routes { get; set; }
         public virtual DbSet<Stops> Stops { get; set; }
+        public virtual DbSet<RouteStop> RouteStops { get; set; }
         public virtual DbSet<ApplicationUser> ApplicationUser { get; set; }
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options) { }
         protected override void OnModelCreating(ModelBuilder builder)

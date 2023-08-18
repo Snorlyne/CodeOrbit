@@ -30,7 +30,9 @@ namespace BaseWeb.Controllers.API.Routes
         [HttpPost("create")]
         public async Task<ActionResult> Crear([FromForm] RoutesCreacionVM routes)
         {
-            var response = await _routesServicio.Crear(routes);
+            StreamReader r = new StreamReader(routes.GeoJSON.OpenReadStream());
+            string jsonString = r.ReadToEnd();
+            var response = await _routesServicio.Crear(routes, jsonString);
             return Ok(response);
         }
         [HttpPut("update/{id}")]

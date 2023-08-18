@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 using Repository.Context;
 using Repository.Repositorio;
 using Services.IServicio.Stops;
-using Services.Servicio.Routes;
+using Services.Servicio.Route;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services.Servicio.Stops
+namespace Services.Servicio.StopsServicio
 {
     public class StopsServicio : IStopsServicio
     {

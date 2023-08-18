@@ -10,7 +10,7 @@ namespace Services.IServicio.Routes
 {
     public interface IRoutesServicio
     {
-        Task<ResponseHelper> Crear(RoutesCreacionVM routes);
+        Task<ResponseHelper> Crear(RoutesCreacionVM routes, string json);
         Task<ResponseHelper> Editar(RoutesVM routes, int? id);
         Task<ResponseHelper> Eliminar(int? id);
         Task<List<RoutesVM>> ObtenerLista();
